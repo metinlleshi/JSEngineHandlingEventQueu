@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function WaitThreeSeconds(){
+            var ms = 5000 + new Date().getTime();
+            while(new Date() < ms) {
+
+            }
+            console.log("Wait3seconds finished");
+        }
+
+        function clickHandler() {
+            console.log("click event handler fired");
+        }
+
+        document.addEventListener("click", clickHandler);
+        WaitThreeSeconds();
+
+        function greet(name, surname){
+            var t;
+            name = name || "Your name";
+            surname = surname || "Lleshi";
+            console.log("Hello" + name);
+        }
+        greet("metin");
+        greet();
+    </script>
+</body>
+</html>
